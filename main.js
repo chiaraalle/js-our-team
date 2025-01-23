@@ -39,6 +39,11 @@ const teamMembers = [
 
   const teamCard = document.getElementById("contenitore-teamcard");
 
+  const nomeCognome = document.getElementById('nomeCognome');
+  const ruolo = document.getElementById('ruolo');
+  const img = document.getElementById('immagine');
+  const email = document.getElementById('email');
+
   for (let i = 0; i < teamMembers.length; i++) {
 
     let info = teamMembers[i];
@@ -56,3 +61,16 @@ const teamMembers = [
     ` )    
        
   } 
+
+  btnSubmit.addEventListener("click", function(event){
+  
+    event.preventDefault()
+    teamMembers.push(
+        {
+            name: 'nomeCognome',
+            role: 'ruolo',
+            email: 'email',
+            img: 'img'  
+        })
+    console.log(teamMembers)
+  })
