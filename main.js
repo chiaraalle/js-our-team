@@ -36,3 +36,23 @@ const teamMembers = [
       img: "img/female3.png"
     }
   ];
+
+  const teamCard = document.getElementById("contenitore-teamcard");
+
+  for (let i = 0; i < teamMembers.length; i++) {
+
+    let info = teamMembers[i];
+    teamCard.innerHTML = teamCard.innerHTML.concat(`
+    <div class="flex">
+                <figure>
+                    <img height="100px" src='./${info.img}' alt='${info.name}'/>
+                </figure>
+                <div class="flex flex-column">
+                    <h5>'${info.name}'</h5>
+                    <span>'${info.email}'</span>
+                    <span>'${info.role}'</span>
+                </div>
+    </div>   
+    ` )    
+       
+  } 
